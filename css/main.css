@@ -2886,7 +2886,7 @@ footer h4.h05::after {
 /* footer main
  * --------------------------------- */
 .footer-main {
-  padding-top: 9.6rem;
+  padding-top: 0.6rem;
   padding-bottom: 3rem;
 }
 .footer-main ul {

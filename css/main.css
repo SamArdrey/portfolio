@@ -1253,6 +1253,9 @@ header .header-logo {
   -webkit-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  overflow: hidden;
+  object-fit: contain;
+
 }
 header .header-logo a {
   display: block;
@@ -1265,7 +1268,9 @@ header .header-logo a {
   background: url("../images/ME.jpg") no-repeat center;
   background-size: 250px 250px;
   border-radius: 50%;
-  font: 0/0 a;
+  overflow: hidden;
+  font: 0/0;
+  object-fit: contain;
   text-shadow: none;
   color: transparent;
   -moz-transition: all 0.5s ease-in-out;
@@ -1491,8 +1496,9 @@ header .header-logo a {
 @media only screen and (max-width: 768px) {
   header .header-logo a {
     width: 51px;
-    height: 24px;
-    background-size: 51px 24px;
+    height: 51px;
+    background-size: 51px;
+    border-radius: 50%;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -1573,27 +1579,29 @@ header .header-logo a {
 /* home social-list */
 .home-social-list {
   position: absolute;
-  right: 150px;
+  right: 5vw;
   top: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 10.4rem;
+  font-size: 5.4rem;
   line-height: 1.75;
   text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 .home-social-list::before {
-  display: block;
   content: "";
-  width: 2px;
+  width: 0px;
   height: 42px;
-  /* background-color: rgba(255, 255, 255, 0.3); */
+  background-color: rgba(255, 255, 255, 0.3);
   margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 12px;
+  /* margin-right: auto; */
+  /* margin-bottom: 12px; */
 }
 .home-social-list li {
   padding-left: 0;
+  margin-left: .5vw;
 }
 .home-social-list li a, .home-social-list li a:visited {
   color: #FFFFFF;
@@ -1708,7 +1716,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
     font-size: 2.1rem;
   }
   .home-social-list::before {
-    height: 30px;
+    height: 0px;
   }
 
   .scrolldown .scroll-icon {
@@ -1749,9 +1757,11 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
     left: 30px;
     bottom: 30px;
     font-size: 1.8rem;
+    border: none;
   }
   .home-social-list::before {
-    height: 24px;
+    height: 0px;
+    border: none;
   }
 }
 @media only screen and (max-width: 400px) {
